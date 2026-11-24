@@ -1,0 +1,11 @@
+# Example commands for non-VR non-fabric growth form on height analysis
+
+BayesTraitsV5 Cactus_height_gf_BT_tree_May_correction_final.nex.prue.trees  Cactus_height_no_gf_BT_sample_May_correction_final_prue.txt
+7
+2
+Burnin 40000000
+Iterations 240000000
+Sample 20000
+Stones 1000 20000
+LogFile Cactus_height_non_VR_non_Fabric_1
+Run

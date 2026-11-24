@@ -1,0 +1,154 @@
+# Example command files for BayesTraits analyses
+# Note - these were replicated six times each
+# We used the variable-rates post-processor and the fabric post-processor on outputs
+# Post-processors available at https://www.evolution.reading.ac.uk/BayesTraitsV5.0.4/BayesTraitsV5.0.4.html
+
+# Fabric regression
+BayesTraitsV5 treefile.tre traitfile.txt
+9
+2
+Fabric
+Prior FabricBeta Weibull 4.77418220101818 1.48437960725623
+Prior Var exp 0.01
+RJThreshold FabricBeta -0.1398714
+SetMinTransTaxaNo 5
+Prior Beta-1 normal 0 5
+Prior Beta-2 normal 0 5
+Prior Beta-3 normal 0 5
+Prior Beta-4 normal 0 5
+Prior Beta-5 normal 0 5
+Prior Beta-6 normal 0 5
+Prior Beta-7 normal 0 5
+Prior Beta-8 normal 0 5
+Burnin 40000000
+Iterations 240000000
+Sample 10000
+Stones 1000 20000
+RJLockModel
+Run
+
+# Fabric univariate with global trend
+BayesTraitsV5 treefile.tre traitfile.txt
+7
+2
+Fabric
+Prior FabricBeta Weibull 4.77418220101818 1.48437960725623
+Prior Sigma-1 exp 0.01
+Prior Alpha-1 normal 4.60 1.00
+GlobalTrend
+RJThreshold FabricBeta -0.1398714
+SetMinTransTaxaNo 5
+Burnin 40000000
+Iterations 240000000
+Sample 10000
+Stones 1000 20000
+RJLockModel
+Run
+
+# Fabric univariate without global trend
+BayesTraitsV5 treefile.tre traitfile.txt
+7
+2
+Fabric
+Prior FabricBeta Weibull 4.77418220101818 1.48437960725623
+Prior Sigma-1 exp 0.01
+Prior Alpha-1 normal 4.60 1.00
+RJThreshold FabricBeta -0.1398714
+SetMinTransTaxaNo 5
+Burnin 40000000
+Iterations 240000000
+Sample 10000
+Stones 1000 20000
+RJLockModel
+Run
+
+# Fabric regression with global trend
+BayesTraitsV5 treefile.tre traitfile.txt
+Fabric
+GlobalTrend
+Prior FabricBeta Weibull 4.77418220101818 1.48437960725623
+Prior Var exp 0.01
+RJThreshold FabricBeta -0.1398714
+SetMinTransTaxaNo 5
+Prior Beta-1 normal 0 5
+Prior Beta-2 normal 0 5
+Prior Beta-3 normal 0 5
+Prior Beta-4 normal 0 5
+Prior Beta-5 normal 0 5
+Prior Beta-6 normal 0 5
+Prior Beta-7 normal 0 5
+Prior Beta-8 normal 0 5
+Burnin 40000000
+Iterations 240000000
+Sample 10000
+Stones 1000 20000
+RJLockModel
+Run
+
+# Variable-rates regression
+BayesTraitsV5 treefile.tre traitfile.txt
+9
+2
+VarRates
+SetMinTransTaxaNo 5
+Prior Beta-1 normal 0 5
+Prior Beta-2 normal 0 5
+Prior Beta-3 normal 0 5
+Prior Beta-4 normal 0 5
+Prior Beta-5 normal 0 5
+Prior Beta-6 normal 0 5
+Prior Beta-7 normal 0 5
+Prior Beta-8 normal 0 5
+Burnin 40000000
+Iterations 240000000
+Sample 10000
+Stones 1000 20000
+RJLockModel
+Run
+
+# Variable-rates
+BayesTraitsV5 treefile.tre traitfile.txt
+7
+2
+VarRates
+Burnin 40000000
+Iterations 240000000
+Sample 10000
+Stones 1000 20000
+RJLockModel
+Run
+
+# Variable-rates regression with global trend
+BayesTraitsV5 treefile.tre traitfile.txt
+9
+2
+VarRates
+GlobalTrend
+SetMinTransTaxaNo 5
+Prior Beta-1 normal 0 5
+Prior Beta-2 normal 0 5
+Prior Beta-3 normal 0 5
+Prior Beta-4 normal 0 5
+Prior Beta-5 normal 0 5
+Prior Beta-6 normal 0 5
+Prior Beta-7 normal 0 5
+Prior Beta-8 normal 0 5
+Burnin 40000000
+Iterations 240000000
+Sample 10000
+Stones 1000 20000
+RJLockModel
+Run
+
+# Variable-rates with global trend
+BayesTraitsV5 treefile.tre traitfile.txt
+7
+2
+VarRates
+GlobalTrend
+Burnin 40000000
+Iterations 240000000
+Sample 10000
+Stones 1000 20000
+RJLockModel
+Run
